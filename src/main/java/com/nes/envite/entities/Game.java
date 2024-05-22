@@ -15,4 +15,6 @@ public class Game {
     private Date created_at;
     private Date updated_at;
 
+
 }
+
