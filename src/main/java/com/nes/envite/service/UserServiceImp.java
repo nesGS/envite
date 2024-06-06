@@ -1,6 +1,5 @@
 package com.nes.envite.service;
 
-import com.nes.envite.entities.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
