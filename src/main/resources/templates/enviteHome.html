@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Envite Canario</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #6d9aca;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .start-button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #62e956;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .start-button:hover {
+            background-color: #07610f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Envite Canario</h1>
+<!--        <a href="#" th:href="@{/start}" class="start-button">Comenzar Partida</a>-->
+        <button class="start-button" th:onclick="|window.location.href='@{/enviteStart}'|">Comenzar Partida</button>
+
+
+    </div>
+</body>
+</html>

@@ -1,8 +1,6 @@
 package com.nes.envite.entities;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Transient;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -10,6 +8,8 @@ import java.util.List;
 @Data
 public class Jugador {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre;
 

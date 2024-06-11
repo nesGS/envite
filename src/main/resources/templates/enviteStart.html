@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envite Canario</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .teams {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .player {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .marks {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 35px;
+        }
+
+        .mark {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            background-color: lightgray;
+            margin: 5px;
+        }
+
+        /* Estilos para Jugador 1 y Jugador 3 */
+        .team > :nth-child(1),
+        .team > :nth-child(3) {
+            background-color: lightblue;
+        }
+
+        /* Estilos para Jugador 2 y Jugador 4 */
+        .team > :nth-child(2),
+        .team > :nth-child(4) {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Envite Canario</h1>
+    </div>
+    <div class="teams">
+        <div class="team">
+            <div class="player">
+<!--                <h3 th:text="${jugador1.nombre}">Jugador 1</h3>-->
+                <div class="marks">
+                    <!-- Aquí puedes iterar sobre las marcas del jugador 1 con Thymeleaf -->
+                    <div class="marks">
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                    </div>
+                </div>
+                <button>Enviar Jugada</button>
+            </div>
+            <div class="player">
+<!--                <h3 th:text="${jugador2.nombre}">Jugador 2</h3>-->
+                <div class="marks">
+                    <!-- Aquí puedes iterar sobre las marcas del jugador 2 con Thymeleaf -->
+                    <div class="marks">
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                    </div>
+                </div>
+                <button>Enviar Jugada</button>
+            </div>
+        </div>
+        <div class="team">
+            <div class="player">
+<!--                <h3 th:text="${jugador4.nombre}">Jugador 4</h3>-->
+                <div class="marks">
+                    <!-- Aquí puedes iterar sobre las marcas del jugador 4 con Thymeleaf -->
+                    <div class="marks">
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                    </div>
+                </div>
+                <button>Enviar Jugada</button>
+            </div>
+            <div class="player">
+<!--                <h3 th:text="${jugador3.nombre}">Jugador 3</h3>-->
+                <div class="marks">
+                    <!-- Aquí puedes iterar sobre las marcas del jugador 3 con Thymeleaf -->
+                    <div class="marks">
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                        <button class="mark"></button>
+                    </div>
+                </div>
+                <button>Enviar Jugada</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

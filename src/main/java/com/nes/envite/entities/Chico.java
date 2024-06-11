@@ -24,13 +24,13 @@ public class Chico {
     @OneToMany(mappedBy = "partida")
     private List<Mano> manos;
 
+    @ManyToOne
+    @JoinColumn(name = "ganador")
     private Equipo ganador;
-
-    private long current_turn;
     private boolean state;
-    private long winner_id;
-    private Date created_at;
-    private Date updated_at;
+
+
+
 
 
 }
