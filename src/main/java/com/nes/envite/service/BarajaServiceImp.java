@@ -2,26 +2,38 @@ package com.nes.envite.service;
 
 
 import com.nes.envite.dao.BarajaRepository;
-import com.nes.envite.dao.CartaEnBarajaRepository;
 import com.nes.envite.dao.CartaRepository;
 import com.nes.envite.entities.Baraja;
-import com.nes.envite.entities.Carta;
-import com.nes.envite.entities.CartaEnBaraja;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class BarajaServiceImp {
-
-    @Autowired
-    private CartaRepository cartaRepository;
+public class BarajaServiceImp implements BarajaService{
 
     @Autowired
     private BarajaRepository barajaRepository;
 
     @Autowired
-    private CartaEnBarajaRepository cartaEnBarajaRepository;
+    private CartaRepository cartaRepository;
 
-    @Transactional
+
+
+    @Override
+    public Baraja nuevaBaraja() {
+        return null;
+    }
+
+    @Override
+    public Baraja barajar() {
+        return null;
+    }
+
+    @Override
+    public Baraja repartir() {
+        return null;
+    }
+
+
+
+/*    @Transactional
     public void crearBarajaConCartas() {
         Baraja baraja = new Baraja();
         baraja.setNombre("Baraja Española");
@@ -41,6 +53,6 @@ public class BarajaServiceImp {
             cartaEnBaraja.setPosicion(i);
             cartaEnBarajaRepository.save(cartaEnBaraja);
         }
-    }
+    }*/
 }
 

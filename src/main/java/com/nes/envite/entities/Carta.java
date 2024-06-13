@@ -1,9 +1,8 @@
 package com.nes.envite.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.nes.envite.entities.enums.PaloCarta;
+import com.nes.envite.entities.enums.ValorCarta;
+import jakarta.persistence.*;
 import lombok.Data;
 
 
@@ -14,7 +13,13 @@ public class Carta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String palo;
-    private int numero;
-    private int valor;
+
+    @Enumerated
+    private PaloCarta palo;
+    @Enumerated
+    private ValorCarta valor;
+
+    @ManyToOne
+    @JoinColumn(name = "baraja_id")
+    private Baraja baraja;
 }
