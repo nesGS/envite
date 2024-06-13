@@ -6,6 +6,7 @@ import lombok.Data;
 import java.util.Date;
 import java.util.List;
 
+//@Entity
 @Data
 public class Chico {
 
@@ -13,19 +14,19 @@ public class Chico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
-    @JoinColumn(name = "equipo1_id")
+    //@ManyToOne
+    //@JoinColumn(name = "equipo1_id")
     private Equipo equipo1;
 
-    @ManyToOne
-    @JoinColumn(name = "equipo2_id")
+    //@ManyToOne
+    //@JoinColumn(name = "equipo2_id")
     private Equipo equipo2;
 
-    @OneToMany(mappedBy = "partida")
+    //@OneToMany(mappedBy = "mano_id")
     private List<Mano> manos;
 
-    @ManyToOne
-    @JoinColumn(name = "ganador")
+    //@ManyToOne
+    //@JoinColumn(name = "ganador")
     private Equipo ganador;
     private boolean state;
 

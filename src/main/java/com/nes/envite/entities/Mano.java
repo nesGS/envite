@@ -3,6 +3,7 @@ package com.nes.envite.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+//@Entity
 @Data
 public class Mano {
 
@@ -10,18 +11,18 @@ public class Mano {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
-    @JoinColumn(name = "chico_id")
+    //@ManyToOne
+    //@JoinColumn(name = "chico_id")
     private Chico chico;
     private boolean arrastre;
 
-    @ManyToOne
-    @JoinColumn(name = "ganador_id")
+    //@ManyToOne
+    //@JoinColumn(name = "ganador_id")
     private Equipo ganador;
 
-    //
-    @ManyToOne
-    @JoinColumn(name = "mano_jugador_id")
+
+    //@ManyToOne
+    //@JoinColumn(name = "mano_jugador_id")
     private Jugador manoJugador;
 
 }

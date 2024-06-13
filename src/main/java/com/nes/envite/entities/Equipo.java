@@ -1,13 +1,11 @@
 package com.nes.envite.entities;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
 
+//@Entity
 @Data
 public class Equipo {
 
@@ -17,7 +15,7 @@ public class Equipo {
     private String nombre;
     private int puntos;
 
-    @OneToMany(mappedBy = "equipo")
-    private List<Jugador> jugadores;
+    //@OneToMany(mappedBy = "equipo")
+    //private List<Jugador> jugadores;
 
 }

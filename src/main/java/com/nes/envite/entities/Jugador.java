@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.util.List;
 
+//@Entity
 @Data
 public class Jugador {
 
@@ -13,10 +14,10 @@ public class Jugador {
     private long id;
     private String nombre;
 
-    @ManyToOne
-    @JoinColumn(name="equipo_id")
+    //@ManyToOne
+    //@JoinColumn(name="equipo_id")
     private Equipo equipo;
 
-    @Transient
-    private List<Carta> cartasJugador;
+    //@Transient
+    //private List<Carta> cartasJugador;
 }

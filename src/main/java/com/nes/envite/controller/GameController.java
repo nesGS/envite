@@ -13,7 +13,7 @@ public class GameController {
 
     @GetMapping("/enviteHome")
     public String home(Model model) {
-        return "enviteHome";
+    return "enviteHome";
     }
 
     @GetMapping("/enviteStart")
